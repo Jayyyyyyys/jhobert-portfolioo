@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: #2c3e50;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+    position: fixed;
+    top: 20px;
+    left: 5%;
+    width: 90%;
+    z-index: 1000;
+    border-radius: 50px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+/* SECTION 1: HOME */
+.hero-section {
+    display: flex;
+    height: 100vh;
+}
+
+.hero-image { flex: 1; }
+.hero-image img { width: 100%; height: 100%; object-fit: cover; }
+
+.hero-text {
+    flex: 1.2;
+    background-color: #9b8a96;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10%;
+}
+
+.hero-text h1 { font-size: 3.5rem; margin-bottom: 20px; }
+
+
+.legislative-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10%;
+}
+
+
+.legislative-section::before {
+    content: "";
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/About.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -2; 
+}
+
+.glass-container {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 25px;
+    border-radius: 15px;
+    color: #1a1a1a;
+}
+
+.glass-card h2 { font-size: 2rem; margin-bottom: 5px; }
+.glass-card p { font-size: 0.9rem; line-height: 1.4; word-break: break-all; }
+
+
+.works-section {
+    position: relative;
+    height: 100vh;
+    background-color: #ffffff; 
+    z-index: 10; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.works-background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.works-background-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1; 
+}
+
+.works-content {
+    text-align: center;
+    width: 80%;
+}
+
+.works-content h1 {
+    font-size: 4rem;
+    margin-bottom: 50px;
+    color: #1a1a1a;
+}
+
+.works-grid {
+    display: flex;
+    justify-content: space-around;
+}
+
+.work-item {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.work-item:hover { transform: translateY(-10px); }
+
+.work-item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    background-color: white; 
+}
+
+.work-item span { font-size: 1.8rem; font-weight: bold; }
+
+@media (max-width: 768px) {
+    .hero-section { flex-direction: column; }
+    .works-grid { flex-direction: column; gap: 30px; }
+    .legislative-section { justify-content: center; padding-right: 0; }
+}
+/* FOOTER STYLES */
+.main-footer {
+    background-color: #1a1a1a; 
+    color: white;
+    padding: 30px 0;
+    width: 100%;
+    position: relative;
+    z-index: 20;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-content p {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    letter-spacing: 1px;
+}
+
+.social-links {
+    display: flex;
+    gap: 25px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5rem; 
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    transform: translateY(-5px);
+    color: #9b8a96; 
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        padding: 0 20px;
+    }
+}
