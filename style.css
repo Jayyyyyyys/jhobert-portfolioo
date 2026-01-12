@@ -61,8 +61,9 @@ html {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    padding-right: 10%;
+    justify-content: flex-end; /* Keeps them on the right side */
+    padding: 100px 5%; /* Reduced side padding to let it expand more */
+    overflow: hidden;
 }
 
 
@@ -80,24 +81,36 @@ html {
 }
 
 .glass-container {
-    width: 500px;
+    /* Change width from 500px to a larger percentage */
+    width: 100%; 
+    max-width: 70%; /* This allows the glass to take up 70% of the screen width */
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 25px;
+    z-index: 1;
 }
 
 .glass-card {
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 25px;
-    border-radius: 15px;
+    padding: 40px; /* Increased padding inside the card */
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     color: #1a1a1a;
+    width: 100%; /* Ensures card fills the container */
 }
 
-.glass-card h2 { font-size: 2rem; margin-bottom: 5px; }
-.glass-card p { font-size: 0.9rem; line-height: 1.4; word-break: break-all; }
+.glass-card h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.glass-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
 
 
 .works-section {
